@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js" defer></script>
+  <title>Name Gender Analyzer</title>
+</head>
+<body>
+  <div class="primary-layout">
+    <div class="central-panel">
+      <div class="input-section">
+        <form id="nameAnalysisForm">
+          <h1>Name to Gender</h1>
+          <div class="field-group">
+            <label for="nameField">Name: <span class="mandatory">*</span></label>
+            <input type="text" id="nameField" placeholder="Type a name here">
+          </div>
+          <div class="choice-set">
+            <div class="choice">
+              <input type="radio" id="maleChoice" name="genderOption" value="male">
+              <label for="maleChoice">Male</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="femaleChoice" name="genderOption" value="female">
+              <label for="femaleChoice">Female</label>
+            </div>
+          </div>
+          <div class="action-buttons">
+            <div id="alertBox" class="alert-area">
+                <!-- Display alerts here -->
+                This is an error message.
+            </div>
+            <button class="action-btn" id="analyzeBtn" type="submit">Analyze</button>
+            <button class="action-btn" id="recordBtn" type="button">Record</button>
+        </div>        
+        </form>
+      </div>
+      <div class="result-section">
+        <h1>Analysis Results</h1>
+        <p id="predictedGender">Predicted Gender</p>
+        <p id="confidenceScore">Confidence Score</p>
+        <div class="storage-area">
+          <p id="storedResponses">Stored responses will appear here.</p>
+          <button class="action-btn" id="clearStorage">Erase Stored</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

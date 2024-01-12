@@ -1,0 +1,200 @@
+/* Color Palette Variables - Blue and Orange-ish */
+:root {
+    --main-background-color: #f5f9fd; 
+    --primary-text-color: #333; 
+
+    --alert-color: #ff7043; 
+    --alert-background-color: #f5f9fd;
+
+    --panel-background-color: #ffffff; 
+    --panel-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+
+    --input-background-color: #d6e4f0; 
+    --result-background-color: #f7e5d4; 
+
+    --mandatory-color: #ff7043; 
+
+    --choice-background-color: #d6e4f0; 
+    --choice-hover-color: #d2dded; 
+
+    --action-button-background-color: #337ab7; 
+    --action-button-hover-color: #286090; 
+
+    --storage-area-background-color: #ffdfb2; 
+}
+
+/* General Styling, Setting padding, margin, and background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Styling for Alert Area */
+.alert-area {
+    color: var(--alert-color);
+    text-align: center;
+    /* background-color: var(--alert-background-color); */
+    padding: 5px; /* Add some padding to make it more visible */
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column; /* Change to column layout to stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+.action-btn {
+    background-color: var(--action-button-background-color);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Styling for Primary Layout */
+.primary-layout {
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Styling for Central Panel */
+.central-panel {
+    background-color: var(--panel-background-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--panel-box-shadow);
+    display: flex;
+    justify-content: space-around; /* For even spacing */
+    gap: 20px;
+}
+
+/* Styling for Input and Result Sections */
+.input-section, .result-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px; /* Minimum width for consistency */
+}
+
+/* Styling for Input and Result Sections */
+.input-section {
+    background-color: var(--input-background-color);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.result-section {
+    background-color: var(--result-background-color);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Styling for Field Group */
+.field-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--primary-text-color);
+}
+
+/* Styling for Mandatory Fields. The field will have a red '*' */
+.mandatory {
+    color: var(--mandatory-color);
+}
+
+/* Styling for Input Text Fields */
+.field-group input[type='text'] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    margin: 5px 0 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Styling for Choice Set */
+.choice-set {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    background-color: var(--choice-background-color);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice:hover {
+    background-color: var(--choice-hover-color);
+}
+
+.choice input[type='radio'] {
+    margin-right: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Styling for Action Buttons */
+.action-btn {
+    background-color: var(--action-button-background-color);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover for action button */
+.action-btn:hover {
+    background-color: var(--action-button-hover-color);
+}
+
+/* Styling for Result Section Heading */
+.result-section h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Styling for Storage Area */
+.storage-area {
+    background-color: var(--storage-area-background-color);
+    padding: 18px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 100px; /* Minimum height for consistency */
+}
+
+.storage-area p {
+    margin: 10px 0;
+}
+
+.storage-area .action-btn {
+    width: 100%;
+    margin-top: 10px;
+}
